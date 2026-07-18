@@ -20,7 +20,7 @@
 <body>
 <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
 <h1>Noeta — Privacy Policy / 隐私政策</h1>
-<p class="meta">Effective / 生效日期: 2026-07-17 · Contact / 联系: <a href="mailto:support@noetaapp.com">support@noetaapp.com</a></p>
+<p class="meta">Effective / 生效日期: 2026-07-18 · Contact / 联系: <a href="mailto:support@noetaapp.com">support@noetaapp.com</a></p>
 
 <h2>English</h2>
 <p>Noeta ("we", "the app") is a private notebook that helps you keep notes about the people in your life and offers AI-assisted insights. We keep data collection to what is needed to run the app and give you control over your information.</p>
@@ -30,6 +30,7 @@
 <p><strong>Content you create.</strong> Your notes, people, relationships, analyses, chats, usage footprint, images, and audio are primarily stored on your device and are not used for multi-device content sync. During the beta testing program, signed-in test accounts upload one overwrite-in-place diagnostic snapshot containing the latest structured notes, people, relationships, transcripts, and AI results. Image and audio file bytes are not included. The snapshot is linked to the test account and is used only by the development team to reproduce and fix beta issues. When you invoke an AI feature, only the context needed for that request is encrypted in transit and sent to the configured AI provider for processing. Provider retention is governed by that provider's applicable terms; Noeta does not claim that every provider offers zero retention. On supported Apple devices, imported audio is transcribed on-device first. If on-device transcription is unavailable or fails, Noeta asks for permission before sending that audio over an encrypted connection to the configured AI transcription provider. Declining leaves the original recording on the device.</p>
 <p><strong>Anonymous product usage data.</strong> By default, Noeta assigns a random identifier to this installation and records screen visits, semantic actions, action order, active duration, success/failure, app version, and platform. This identifier is not linked to your account. We do not include note text, names, transcripts, AI results, images, audio, filenames, or local paths. You can disable this anytime under <strong>Me → Privacy &amp; Data → Anonymous Usage Data</strong>; disabling it also removes events that are still waiting on your device to upload. This setting is separate from the signed-in beta diagnostic snapshot described above.</p>
 <p><strong>AI service operation and quota data.</strong> For AI requests, Noeta uses a separate random installation identifier. The server converts it with a secret keyed hash and stores only the resulting opaque hash and a short support code. We record metadata such as the AI capability, provider/model, status, latency, payload byte count, weighted cost, retry/failure stage, and time. To enforce and explain beta quotas, we also keep quota balances and invitation-code redemption history; the device sends aggregate counts of locally stored events, people, and user chat messages. For event analysis, the device sends a SHA-256 token derived from the local event ID so the service can count successful analyses and regenerations without receiving that local ID. These operational records do not contain note or chat text, names, transcripts, AI output, images, audio, filenames, paths, credentials, or the raw installation identifier, and are not linked to an account. Because the opaque quota identifier remains stable for this installation, these records can be associated over time with the same installation, but not with an account unless a future account migration is separately introduced and disclosed. They are required to provide quotas and support and are therefore collected independently of the optional Anonymous Usage Data setting.</p>
+<p><strong>Optional notification data.</strong> If you enable product-announcement notifications, Noeta creates another random installation identifier and sends the APNs device token, notification preference, locale, app version, and delivery/click status to our server. The identifier is separate from analytics and quota identifiers and is not linked to an account. Apple Push Notification service receives the token and generic notification payload to deliver the notification. Notifications do not contain names, notes, relationship details, profiles, chats, images, or audio. You can disable this under <strong>Me → Notifications &amp; Reminders</strong> or in iOS Settings.</p>
 
 <h3>2. How we use information</h3>
 <p>To provide and maintain the app, including account sign-in and beta issue diagnosis; to provide AI-assisted features (for which relevant content is processed by us and/or trusted third-party providers solely to produce the result); to keep the service reliable and secure; and to respond to support requests. We do not use your content for advertising, and we do not sell your data.</p>
@@ -41,13 +42,13 @@
 <p>We share information only with service providers that help us operate the app (such as cloud hosting and AI processing), under agreements limiting their use to providing services to us, or where required by law. We never sell your data.</p>
 
 <h3>5. Retention &amp; deletion</h3>
-<p>The beta diagnostic table keeps only the latest overwrite-in-place snapshot for an account. It is deleted when the account is deleted and will be removed when the beta diagnostic program ends. Anonymous product events, AI call logs, client error diagnostics, and settled weighted-cost ledger entries are retained for up to 90 days. The opaque quota subject and support code, current quota balances, invitation redemption records, latest aggregate inventory counts, and opaque event-analysis counters may be kept while the beta quota/support program operates so quotas, regeneration counts, and support restoration remain accurate. Content on your device is removed when you delete the app or clear it in-app. If you signed in, you can permanently delete your account and its associated account data directly in the app: <strong>Me → account card → "Delete account"</strong>. Deletion takes effect immediately and cannot be undone; we retain only limited records required for security or legal compliance. You may also request deletion at the contact below.</p>
+<p>The beta diagnostic table keeps only the latest overwrite-in-place snapshot for an account. It is deleted when the account is deleted and will be removed when the beta diagnostic program ends. Anonymous product events, AI call logs, client error diagnostics, settled weighted-cost ledger entries, and notification delivery/click records are retained for up to 90 days. An APNs token and its separate installation identifier are retained while notifications are enabled, and disabled when you turn them off or APNs reports that the token is no longer valid. The opaque quota subject and support code, current quota balances, invitation redemption records, latest aggregate inventory counts, and opaque event-analysis counters may be kept while the beta quota/support program operates so quotas, regeneration counts, and support restoration remain accurate. Content on your device is removed when you delete the app or clear it in-app. If you signed in, you can permanently delete your account and its associated account data directly in the app: <strong>Me → account card → "Delete account"</strong>. Deletion takes effect immediately and cannot be undone; we retain only limited records required for security or legal compliance. You may also request deletion at the contact below.</p>
 
 <h3>6. Security</h3>
 <p>Encrypted transport (HTTPS/TLS); server-side data protected with access controls.</p>
 
 <h3>7. Your choices</h3>
-<p>Use the app without an account (no account-linked diagnostic snapshot); enable or disable anonymous usage data independently; choose the system-backup mode; export or restore an encrypted backup; sign out; or request account deletion and clear local content separately.</p>
+<p>Use the app without an account (no account-linked diagnostic snapshot); enable or disable anonymous usage data independently; choose the system-backup mode; export or restore an encrypted backup; independently enable or disable product-announcement notifications; sign out; or request account deletion and clear local content separately.</p>
 
 <h3>8. Children</h3>
 <p>Not directed to children under 13 (or the minimum age in your region).</p>
@@ -68,6 +69,7 @@
 <p><strong>你创建的内容。</strong>你的记录、人物、关系、分析、对话、使用足迹、图片和音频主要保存在设备上，不用于多设备内容同步。测试期间，已登录测试账号会覆盖式上传一份最新诊断快照，包含结构化的记录、人物、关系、转写和 AI 结果；不包含图片或音频文件本体。快照与测试账号关联，仅供开发团队复现和修复内测问题。你主动使用 AI 功能时，仅完成该次请求所需的上下文会通过加密传输发送给所配置的 AI 服务商处理；服务商是否留存及留存期限以其适用条款为准，Noeta 不承诺所有服务商都为零留存。在受支持的 Apple 设备上，导入音频会优先在设备本机转写；若本机能力不可用或失败，Noeta 会先征得你的同意，再通过加密连接将该音频发送给配置的 AI 转录服务商。拒绝不会删除设备上的原始录音。</p>
 <p><strong>匿名产品使用数据。</strong>默认情况下，本应用为这次安装随机生成一个匿名标识，并记录页面访问、语义操作、操作顺序、前台有效停留时长、成功/失败、应用版本和平台。该标识不与账号关联；不会包含记录正文、人名、转写、AI 结果、图片、音频、文件名或本地路径。你可以随时在<strong>「我」→「隐私与数据」→「匿名使用数据」</strong>关闭；关闭时也会删除设备上尚未上传的埋点。该开关与上述已登录测试账号的诊断快照相互独立。</p>
 <p><strong>AI 服务运行与额度数据。</strong>AI 请求使用另一段随机安装标识；服务端用带密钥哈希将其转换，只保存不可逆的哈希和一段短客服识别码。我们会记录 AI 能力、服务商/模型、状态、延迟、请求字节数、成本权重、是否重试/失败阶段和时间等运行元数据。为执行并向你展示内测额度，我们还会保存额度余额和邀请码兑换记录；设备会上传本地事件、人物和用户对话消息的聚合数量。分析事件时，设备会上传由本地事件 ID 计算出的 SHA-256 不透明标记，用于在不接收本地原始 ID 的情况下统计成功分析和重新生成次数。这些服务运行记录不包含记录或对话正文、人名、转写、AI 输出、图片、音频、文件名、本地路径、鉴权信息或原始安装标识，也不与账号关联。由于不透明额度标识在这次安装期间保持稳定，这些记录可以持续归属于同一次安装；除非未来另行上线并披露账号迁移，否则不会与账号关联。这些数据是提供额度和客服支持所必需的，因此不受可选的「匿名使用数据」开关影响。</p>
+<p><strong>可选通知数据。</strong>你主动开启产品公告通知后，Noeta 会另行生成一段随机安装标识，并把 APNs 设备 token、通知偏好、地区语言、App 版本以及发送/点击状态发送到我们的服务器。该标识与匿名埋点和额度标识分离，不与账号关联；Apple Push Notification service 会接收 token 和通用通知 payload 以完成投递。通知不包含人名、记录、关系详情、侧写、对话、图片或音频。你可以在<strong>「我」→「通知与提醒」</strong>或 iOS 系统设置中关闭。</p>
 
 <h3>2. 我们如何使用信息</h3>
 <p>用于提供和维护应用（含登录和内测问题诊断）；提供 AI 辅助功能（为此，相关内容会由我们和/或受信任的第三方服务商处理，仅用于产出结果）；保持服务稳定与安全；响应支持请求。我们不将内容用于广告，也不出售你的数据。</p>
@@ -79,13 +81,13 @@
 <p>仅与帮助我们运营应用的服务商共享（如云托管、AI 处理），并以协议限制其仅为我们提供服务之用；或在法律要求时共享。绝不出售你的数据。</p>
 
 <h3>5. 留存与删除</h3>
-<p>测试诊断表对每个账号只保留一份覆盖式最新快照；注销账号时删除，并在测试诊断计划结束后移除。匿名产品事件、AI 调用日志、客户端错误诊断和已结算的成本权重流水最多保留 90 天。测试期额度/客服支持运行期间，服务端可能继续保留不可逆的额度主体哈希和客服识别码、当前额度余额、邀请码兑换记录、最新聚合库存数量及不透明事件分析计数，以保持额度、重新生成次数和客服恢复准确。设备上的内容在你删除应用或应用内清除时移除。已登录用户可直接在应用内永久删除账号及全部账号资料：<strong>「我」页 → 账号卡片 → 「删除账号」</strong>。删除即时生效且不可恢复；我们仅保留安全或法律合规所需的有限记录。也可通过下方联系方式申请删除。</p>
+<p>测试诊断表对每个账号只保留一份覆盖式最新快照；注销账号时删除，并在测试诊断计划结束后移除。匿名产品事件、AI 调用日志、客户端错误诊断、已结算的成本权重流水以及通知发送与点击记录最多保留 90 天。APNs token 和独立通知安装标识仅在通知开启期间保留；用户关闭或 APNs 明确报告 token 失效后会停用。测试期额度/客服支持运行期间，服务端可能继续保留不可逆的额度主体哈希和客服识别码、当前额度余额、邀请码兑换记录、最新聚合库存数量及不透明事件分析计数，以保持额度、重新生成次数和客服恢复准确。设备上的内容在你删除应用或应用内清除时移除。已登录用户可直接在应用内永久删除账号及全部账号资料：<strong>「我」页 → 账号卡片 → 「删除账号」</strong>。删除即时生效且不可恢复；我们仅保留安全或法律合规所需的有限记录。也可通过下方联系方式申请删除。</p>
 
 <h3>6. 安全</h3>
 <p>加密传输（HTTPS/TLS）；服务器端数据以访问控制保护。</p>
 
 <h3>7. 你的选择</h3>
-<p>可不登录使用（不产生账号关联诊断快照）、独立开关匿名使用数据、选择系统备份模式、导出或恢复加密备份、退出登录，或分别注销账号和清除本机内容。</p>
+<p>可不登录使用（不产生账号关联诊断快照）、独立开关匿名使用数据、选择系统备份模式、导出或恢复加密备份、独立开关产品公告通知、退出登录，或分别注销账号和清除本机内容。</p>
 
 <h3>8. 儿童</h3>
 <p>不面向 13 岁以下（或你所在地区最低年龄）的儿童。</p>
